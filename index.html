@@ -4,42 +4,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <title>My Portfolio</title>
   <style>
     body {
+      margin: 0;
       font-family: sans-serif;
-      background: #f2f5fa;
-      text-align: center;
-      padding: 60px 20px;
+      background: #e2fff1;
+      color: #334155;
     }
-    .card {
-      max-width: 600px;
-      margin: auto;
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
       background: white;
-      padding: 40px 20px;
       border-radius: 16px;
-      box-shadow: 0 5px 20px #00000010;
+      overflow: hidden;
+      box-shadow: 0 5px 20px #999000010;
     }
-    h1 { color: #2563eb; }
+    header {
+      background: #1e3a5f;
+      color: white;
+      padding: 40px;
+    }
+    header p { color: #dbeafe; }
+    main { padding: 30px 40px; }
+    section { margin-bottom: 30px; }
+    h2 { color: #ff00ff; }
+    .skills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .skill {
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    .progress {
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 10px;
+    }
+    .progress-bar {
+      width: 60%;
+      height: 100%;
+      background: #2563eb;
+      border-radius: 10px;
+    }
     button {
       background: #2563eb;
       color: white;
       border: none;
+      padding: 12px 20px;
       border-radius: 8px;
-      padding: 12px 24px;
       cursor: pointer;
+    }
+    #message { display: none; }
+    @media (max-width: 600px) {
+      .container { margin: 12px; }
+      header, main { padding: 24px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>My First Website</h1>
-    <p>GitHub Pagesで初めてのWebサイトを公開しました！</p>
-    <p>これからWeb開発を学んでいきます。</p>
-    <button onclick="alert('ボタンが動きました！')">
-      クリックしてみよう
-    </button>
+  <div class="container">
+    <header>
+      <h1>こんにちは！</h1>
+      <p>経済学とプログラミングを学ぶ大学生です。</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>自己紹介</h2>
+        <p>大学で経済学を学びながら、
+        GitHubを使ったWeb開発に挑戦しています。</p>
+      </section>
+
+      <section>
+        <h2>学習中のスキル</h2>
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">GitHub</span>
+          <span class="skill">VS Code</span>
+          <span class="skill">Python</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>学習の進捗</h2>
+        <div class="progress">
+          <div class="progress-bar"></div>
+        </div>
+        <p>GitHubの基礎を習得中</p>
+      </section>
+
+      <button onclick="showMessage()">
+        メッセージを表示
+      </button>
+      <p id="message">ご覧いただきありがとうございます！</p>
+    </main>
   </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+      message.style.display =
+        message.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
   
