@@ -22,3 +22,6 @@ GitHubの学習用に作成した、初めてのWebサイトプロジェクト�
 ## 学習記録
 
 GitHubのブランチ機能とPull Requestを学習しています。
+## ローカル開発
+
+GitHub DesktopとVS Codeを使った開発を開始しました。
