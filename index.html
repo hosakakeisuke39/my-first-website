@@ -18,7 +18,7 @@
       background: white;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 5px 20px #999000010;
+      box-shadow: 0 5px 20px #000010;
     }
     header {
       background: #1e3a5f;
@@ -64,7 +64,18 @@
       .container { margin: 12px; }
       header, main { padding: 24px; }
     }
+    .project-card {
+  border: 1px solid #dbeafe;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+}
+.project-card h3 {
+  margin-top: 0;
+  color: #2563eb;
+}
   </style>
+  
 </head>
 <body>
   <div class="container">
@@ -98,6 +109,15 @@
         </div>
         <p>GitHubの基礎を習得中</p>
       </section>
+      <section class="projects">
+  <h2>制作実績</h2>
+  <div class="project-card">
+    <h3>My First Website</h3>
+    <p>HTML・CSS・JavaScriptで制作した、
+    初めてのポートフォリオサイトです。</p>
+    <p>GitHub Desktopで変更履歴を管理しています。</p>
+  </div>
+</section>
 
       <button onclick="showMessage()">
         メッセージを表示
